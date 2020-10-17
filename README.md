@@ -1,0 +1,25 @@
+# HackerRank
+#Minion Game
+def minion_game(string):
+    # your code goes here
+    vowel_list=set(['A','E','I','O','U'])
+    vowel=0
+    constant=0
+    n=len(string)
+    for i in range(n):
+        if string[i] in vowel_list:
+            vowel+=n-i
+        else:
+            constant+=n-i
+    if vowel<constant:
+        print ("Stuart {}".format(constant))
+    elif vowel>constant:
+        print ("Kevin {}".format(vowel))
+    else:
+        print ("Draw")
+
+
+
+if __name__ == '__main__':
+    s = input()
+    minion_game(s)
